@@ -9,7 +9,7 @@
 
 * [Phase 1 — Rust Core Mastery (Weeks 1–4)](#phase-1---rust-core-mastery-weeks-1-4)
 
-    * [Week 1 — Ownership, Borrowing, Lifetimes](Week 1)
+    * [Week 1 — Ownership, Borrowing, Lifetimes](#Week 1)
     * [Week 2 — Enums, Pattern Matching, Error Handling](#week-2---enums-pattern-matching-error-handling)
     * [Week 3 — Traits, Generics, Modules](#week-3---traits-generics-modules)
     * [Week 4 — Testing, Logging, CLI Integration](#week-4---testing-logging-cli-integration)
