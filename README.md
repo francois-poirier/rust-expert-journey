@@ -9,7 +9,7 @@
 
 * [Phase 1 — Rust Core Mastery (Weeks 1–4)](#phase-1---rust-core-mastery-weeks-1-4)
 
-    * [Week 1 — Ownership, Borrowing, Lifetimes](#week-1---ownership-borrowing-lifetimes)
+    * [Week 1 — Ownership, Borrowing, Lifetimes](Week 1)
     * [Week 2 — Enums, Pattern Matching, Error Handling](#week-2---enums-pattern-matching-error-handling)
     * [Week 3 — Traits, Generics, Modules](#week-3---traits-generics-modules)
     * [Week 4 — Testing, Logging, CLI Integration](#week-4---testing-logging-cli-integration)
@@ -43,7 +43,7 @@
     * [Week 22 — Multi-Agent Communication](#week-22---multi-agent-communication)
     * [Week 23 — Performance & Profiling](#week-23---performance--profiling)
     * [Week 24 — Fault Tolerance & Recovery](#week-24---fault-tolerance--recovery)
-    * [Week 25 — Final Project: Autonomous Swarm Simulation](#week-25---final-project-autonomous-swarm-simulation)
+    * [Week 25 — Final Project: Distributed Event-Sourced Ledger in Rust](#week-25---final-project-autonomous-swarm-simulation)
     * [Week 26 — Polish & Showcase](#week-26---polish--showcase)
 
 ---
