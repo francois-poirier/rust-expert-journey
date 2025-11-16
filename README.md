@@ -1,6 +1,6 @@
 # 🦀 26-Week Rust Mastery Roadmap
 
-**Goal:** Become a Senior/Staff Rust Engineer (Distributed, Fault-Tolerant Systems)
+**Goal:** Distributed, Fault-Tolerant Systems
 *Approx. 2 hours/day · 10–12 hours/week · ~6 months*
 
 ---
