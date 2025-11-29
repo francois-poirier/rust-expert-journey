@@ -1,430 +1,300 @@
 # 🦀 52-Week Rust Mastery Roadmap
 
-**Goal:** Become a Senior Rust Engineer (Distributed, Fault-Tolerant Systems)
-*Approx. 2 hours/day · 10–12 hours/week · ~12 months*
+**Goal:** Become a Senior Rust Engineer, proficient in distributed, fault-tolerant systems, cloud deployment, diagnostics, and large-scale Rust architecture.  
+*Approx. 2 h/day · ~10–12 h/week · ~12 months*
 
 ---
 
 ## Table of Contents
 
-* [Phase 1 — Rust Core Mastery (Weeks 1–8)](#phase-1-rust-core-mastery-weeks-1-8)
-* [Phase 2 — Async Rust and Web Backends (Weeks 9–16)](#phase-2-async-rust-and-web-backends-weeks-9-16)
-* [Phase 3 — Concurrency and Messaging (Weeks 17–24)](#phase-3-concurrency-and-messaging-weeks-17-24)
-* [Phase 4 — Distributed Systems (Weeks 25–32)](#phase-4-distributed-systems-weeks-25-32)
-* [Phase 5 — Rust in Cloud & Containers (Weeks 33–40)](#phase-5-rust-in-cloud--containers-weeks-33-40)
-* [Phase 6 — Agents, Performance, and Capstone Project (Weeks 41–52)](#phase-6-agents-performance-and-capstone-project-weeks-41-52)
+- [Phase 1 — Rust Core Mastery (Weeks 1–8)](#phase-1---rust-core-mastery-weeks-1-8)
+- [Phase 2 — Async Rust & Web Backends (Weeks 9–16)](#phase-2---async-rust--web-backends-weeks-9-16)
+- [Phase 3 — Concurrency & Messaging (Weeks 17–24)](#phase-3---concurrency--messaging-weeks-17-24)
+- [Phase 4 — Distributed Systems (Weeks 25–32)](#phase-4---distributed-systems-weeks-25-32)
+- [Phase 5 — Rust in Cloud & Containers (Weeks 33–40)](#phase-5---rust-in-cloud--containers-weeks-33-40)
+- [Phase 6 — Agents, Performance & Capstone (Weeks 41–52)](#phase-6---agents-performance--capstone-weeks-41-52)
 
 ---
 
-## Phase 1 — Rust Core Mastery (Weeks 1–8)
+# Phase 1 — Rust Core Mastery (Weeks 1–8)
 
-**Outcome:** Write idiomatic, memory-safe Rust confidently.
+**Outcome:** Build a strong foundation in Rust’s ownership, types, traits, generics, modules, error handling, and testing.
 
 ### Weeks 1–2 — Ownership, Borrowing, Lifetimes
+**Study**
+- *The Rust Programming Language* (TRPL) — ch.1–4 (Ownership & References, Slices, Lifetimes)
+- *Rust by Example* — Ownership, References & Borrowing, Lifetimes
 
-**Tasks**
+**Exercises**
+- Rustlings: `variables`, `functions`, `ownership`, `references`, `borrow`, `slices`, `lifetimes`
 
-* [ ] Complete Rustlings exercises 1–4
-* [ ] Read *The Rust Programming Language* ch. 1–4
-* [ ] Watch tutorials on ownership & borrowing
-* [ ] Mini project: **Config Parser** — parse `.toml` config → validate → print
-
-**Deliverables**
-
-* CLI that loads, validates, and prints parsed config
-* Unit tests exploring ownership & borrowing edge cases
-
----
+**Mini-Project**
+- CLI config parser
 
 ### Weeks 3–4 — Enums, Pattern Matching, Error Handling
+**Study**
+- TRPL — ch.6 Enums & Pattern Matching, ch.9 Error Handling
+- Rust by Example — Enums, Pattern Matching, Option & Result, error propagation
 
-**Tasks**
-
-* [ ] Learn `enum`, `match`, `if let`, `while let`
-* [ ] Practice `Result` / `Option` patterns and `?` operator
-* [ ] Use `thiserror` and `anyhow` for custom errors
-* [ ] Extend Config Parser to return rich errors and recovery messages
-
-**Deliverables**
-
-* Error-tolerant CLI with clear error messages
-* Optional: logging for error paths
-
----
+**Exercises**
+- Rustlings: `enums`, `options`, `error_handling`
+- Parse user input → `Result` → custom error types
 
 ### Weeks 5–6 — Traits, Generics, Modules
+**Study**
+- TRPL — ch.10 Generics, Traits, and Lifetimes, ch.7 Modules and Crates
+- Rust by Example — Traits, Generics, Modules, Visibility
 
-**Tasks**
-
-* [ ] Implement traits, trait bounds, and generic types
-* [ ] Refactor projects into modules and crates (library + binary)
-* [ ] Mini project: **Math Toolkit** crate — vectors, basic linear algebra, traits
-
-**Deliverables**
-
-* GitHub repo demonstrating crate layout and generic trait usage
-
----
+**Exercises**
+- Rustlings: `traits`, `generics`, `modules`
+- Define and implement custom traits
 
 ### Weeks 7–8 — Testing, Logging, CLI Integration
+**Study**
+- TRPL — ch.11 Testing, ch.12 I/O Project
+- Logging crates: `log`, `env_logger`, `tracing`
 
-**Tasks**
+**Exercises**
+- Rustlings: `tests`, `iterators`
+- Unit and integration tests for previous mini-projects
 
-* [ ] Learn `#[test]`, integration tests, and test fixtures
-* [ ] Learn logging crates: `log`/`env_logger` and `tracing`
-* [ ] Mini project: **Log Analyzer** — parse logs, aggregate by severity, output CSV
-
-**Deliverables**
-
-* CLI with tests and CI integration
-* Add command-line flags to filter logs by level/date
-
----
-
-## Phase 2 — Async Rust and Web Backends (Weeks 9–16)
-
-**Outcome:** Build async web APIs with `tokio` + `axum`.
-
-### Weeks 9–10 — Async/Await and Tokio Runtime
-
-**Tasks**
-
-* [ ] Learn `async`/`await`, spawning tasks, `join!`, `select!`
-* [ ] Mini project: **Concurrent Downloader** — fetch multiple URLs concurrently with retries
-
-**Deliverables**
-
-* Async CLI downloader with logging and metrics
+**Mini-Project**
+- Log Analyzer CLI with tests and logging
 
 ---
 
-### Weeks 11–12 — HTTP Servers with axum
+# Phase 2 — Async Rust & Web Backends (Weeks 9–16)
+
+**Outcome:** Build async web services, REST APIs, interact with databases, and produce production-grade code.
+
+### Weeks 9–10 — Async/Await & Tokio Runtime
+**Study**
+- *Async Rust Book* — Futures, Async/Await, Executors, Pinning, Cancellation
+- Tokio docs — Tasks, Spawning, Timing utilities
+
+**Exercises**
+- Rustlings: `async-await`, `futures`, `async-fn`
+- Spawn tasks, use `join!`, `select!`, timeouts
+
+**Mini-Project**
+- Concurrent Downloader CLI
+
+### Weeks 11–12 — HTTP Servers with Axum
+**Study**
+- Axum Guide — Routing, Extractors, Responses, JSON handling, Middleware
+- Tower & Hyper basics
+
+**Exercises**
+- Minimal JSON endpoint with state sharing
+- Actor-based worker pipeline
+
+**Project**
+- TaskHub REST service (CRUD) — in-memory store
+
+### Weeks 13–14 — Databases & Observability
+**Study**
+- SQLx — Async queries, pool management, migrations
+- Tracing crate — structured logging, spans
+- Config: `dotenvy`, `config` crates
+
+**Exercises**
+- Async SQLx queries and migrations
+- Tracing spans around DB calls and handlers
 
 **Tasks**
+- Integrate Postgres persistence
+- Structured logs and metrics instrumentation
 
-* [ ] Build **TaskHub** REST API (`GET/POST/PUT/DELETE`)
-* [ ] Add request validation and error handling
+### Weeks 15–16 — Testing + Dockerization
+**Study**
+- TRPL I/O & error patterns, Rust testing
+- Docker Docs & community guides
 
-**Deliverables**
+**Exercises**
+- Integration tests with `reqwest`
+- Dockerfile multi-stage build + Docker Compose
 
-* Working async API server with in-memory caching
+**Tasks**
+- Containerize services, set up DB
+- Verify integration and containerized behavior
 
 ---
 
-### Weeks 13–14 — Databases and Observability
+# Phase 3 — Concurrency & Messaging (Weeks 17–24)
 
-**Tasks**
-
-* [ ] Add Postgres persistence via `sqlx`
-* [ ] Manage config via environment variables
-* [ ] Add structured logging/traces with `tracing`
-
-**Deliverables**
-
-* API with DB persistence and observability dashboards
-
----
-
-### Weeks 15–16 — Testing and Dockerization
-
-**Tasks**
-
-* [ ] Write integration tests using `reqwest` + ephemeral Postgres
-* [ ] Create multi-stage Dockerfile + Compose file
-
-**Deliverables**
-
-* Dockerized TaskHub microservice with integration tests
-* Optional: CI pipeline to build and test container
-
----
-
-## Phase 3 — Concurrency and Messaging (Weeks 17–24)
-
-**Outcome:** Master threads, async streams, actor model, and messaging systems.
+**Outcome:** Master concurrency, async streams, actor models, and message-based distributed systems.
 
 ### Weeks 17–18 — Concurrency Primitives
+**Study**
+- TRPL ch.16 “Fearless Concurrency”, Rust by Example: Threads, Mutex, RwLock, Channels
 
-**Tasks**
+**Exercises**
+- Rustlings: `threads`, `threads2`, `mutex`, `sync`
+- Thread-pool implementation
+- Atomic counters
 
-* [ ] Learn `Arc`, `Mutex`, `RwLock`, atomic types, `std::thread`
-* [ ] Compare multi-threaded vs async approaches
-* [ ] Small benchmarks: word-count or number crunching using threads vs async
-
-**Deliverables**
-
-* Parallel word-count demo with benchmarking results
-
----
+**Mini-Project**
+- Parallel word-count CLI with benchmark
 
 ### Weeks 19–20 — Async Channels & Streams
+**Study**
+- Async Rust Book — Streams, Channels, Select, Async I/O
+- Tokio: `mpsc`, `broadcast`, `watch`, `tokio_stream`
 
-**Tasks**
+**Exercises**
+- Convert sync iterator to Stream
+- Producer → Stream → Consumer pipeline
 
-* [ ] Use channels and async streams to pipeline work
-* [ ] Project: **Concurrent Crawler** — fetch pages concurrently, stream results downstream
-* [ ] Handle graceful shutdown and backpressure
-
-**Deliverables**
-
-* Async crawler demo with streaming and logging
-* Unit tests for pipeline logic
-
----
+**Project**
+- Concurrent web crawler
 
 ### Weeks 21–22 — Actor Model in Rust
+**Study**
+- Actor frameworks: xtra, Ractor, Actix
+- Actor model concepts: supervision trees, mailbox semantics
 
-**Tasks**
+**Exercises**
+- Minimal actor with message handling and state
+- Supervision tree implementation
 
-* [ ] Study an actor framework (`xtra`, `ractor`, or `actix`)
-* [ ] Convert crawler workers to actor-based workers
-* [ ] Implement supervision and message passing patterns
-
-**Deliverables**
-
-* Actor-based crawler demonstrating resilience and message passing
-
----
+**Project**
+- Actor-based crawler
 
 ### Weeks 23–24 — Messaging & Queue Integration
+**Study**
+- Kafka/NATS official docs, Rust crates `rdkafka`, `async-nats`
 
-**Tasks**
+**Exercises**
+- Rust producer & consumer with retries
+- Connect actor-based workers to broker
 
-* [ ] Integrate Kafka or NATS for task distribution
-* [ ] Implement producer/consumer pattern with retry semantics
-* [ ] Connect multiple actors/nodes via messaging system
-
-**Deliverables**
-
-* Multi-node async pipeline using a message broker
-
----
-
-## Phase 4 — Distributed Systems (Weeks 25–32)
-
-**Outcome:** Implement consensus, replication, and fault-tolerant distributed systems.
-
-### Weeks 25–26 — Distributed Systems Fundamentals in Rust
-
-**Tasks**
-
-* [ ] Study CAP theorem, consistency models, replication strategies
-* [ ] Rust sketches: simple replicated key-value store
-* [ ] Diagram replication topologies in Rust structs/enums
-
-**Mini-project:** CLI simulating replicated nodes
-
-**Deliverables**
-
-* Notes comparing CP vs AP behavior
-* Rust simulation of replicated nodes
+**Project**
+- Multi-node message pipeline demo
 
 ---
 
-### Weeks 27–28 — Raft Algorithm in Rust
+# Phase 4 — Distributed Systems (Weeks 25–32)
+
+**Outcome:** Build fault-tolerant, replicated, consistent distributed systems.
+
+### Weeks 25–26 — Distributed Systems Fundamentals
+**Study**
+- DDIA by Kleppmann: ch.1,2,5,8,9
+- Distributed Systems for Fun and Profit: ch.1–6
+
+**Exercises**
+- Sketch replication topologies in Rust enums
+- In-memory replicated key-value store
 
 **Tasks**
+- CLI to simulate N nodes, replication, and delays
 
-* [ ] Implement simplified Raft leader election and log replication
-* [ ] Build small 3-node in-memory cluster
+### Weeks 27–28 — Implementing Raft in Rust
+**Study**
+- Raft paper — leader election, log replication, safety
+- Optional: `async-raft` crate docs
 
-**Mini-project:** **RustRaft**
+**Exercises**
+- Randomized election timeouts, in-memory log, AppendEntries RPC
+- Leader election demo
+
+**Project**
+- RustRaft 3-node in-memory cluster
+
+### Weeks 29–30 — Persistent Distributed Key-Value Store
+**Study**
+- `sled` & `rocksdb` docs, Axum REST API, snapshotting design
+
+**Exercises**
+- Persistent log storage, snapshotting, recovery
+
+**Project**
+- RaftiKV: RESTful KV store backed by Raft + persistence
+
+### Weeks 31–32 — Fault Injection, Metrics & Chaos Testing
+**Study**
+- Chaos Engineering book, Prometheus, tracing + OpenTelemetry
+
+**Exercises**
+- Network simulation harness
+- Metrics instrumentation & Grafana dashboards
 
 **Deliverables**
-
-* Leader election demo
-* Logs showing state transitions
+- Chaos-tested RaftiKV cluster with metrics
 
 ---
 
-### Weeks 29–30 — Distributed Key-Value Store
+# Phase 5 — Rust in Cloud & Containers (Weeks 33–40)
 
-**Tasks**
-
-* [ ] Use `sled` or `rocksdb` for persistence
-* [ ] Expose REST API via `axum`
-* [ ] Implement snapshotting for recovery
-
-**Mini-project:** **RaftiKV**
-
-**Deliverables**
-
-* REST API with persistent Raft-backed storage
-* Unit tests for consistency
-
----
-
-### Weeks 31–32 — Fault Injection and Metrics
-
-**Tasks**
-
-* [ ] Simulate node failures and network partitions
-* [ ] Add Prometheus metrics and structured logs with `tracing`
-
-**Mini-project:** Chaos-tested RaftiKV cluster
-
-**Deliverables**
-
-* Metrics dashboards + chaos experiment report
-
----
-
-## Phase 5 — Rust in Cloud & Containers (Weeks 33–40)
-
-**Outcome:** Deploy, monitor, and automate Rust systems in cloud environments.
+**Outcome:** Deploy, monitor, and maintain Rust services in containers and orchestration platforms.
 
 ### Weeks 33–34 — Dockerizing Rust Services
+**Study**
+- Dockerfile best practices, multi-stage builds
+
+**Exercises**
+- Dockerfile for RaftiKV & RustRaft
+- Optimize image size
 
 **Tasks**
+- Compose file for multi-node deployment
 
-* [ ] Multi-stage Docker builds
-* [ ] Containerize RaftiKV and RustRaft
-* [ ] Run locally via Docker Compose
+### Weeks 35–36 — Kubernetes for Rust Services
+**Study**
+- Kubernetes Up & Running: Pods, Deployments, ConfigMaps, Probes
 
-**Deliverables**
+**Exercises**
+- Write manifests for Deployment/Service/ConfigMap
+- Test scaling & failover
 
-* Dockerized Rust services
-* Local Compose environment for multi-node testing
+### Weeks 37–38 — Observability, Logging & Monitoring
+**Study**
+- Prometheus, Grafana, tracing & OpenTelemetry
+
+**Exercises**
+- Instrument metrics & distributed tracing
+- Grafana dashboards for service metrics
+
+### Weeks 39–40 — CI/CD Pipeline
+**Study**
+- GitHub Actions, caching, secrets, build matrices
+
+**Exercises**
+- Workflow: lint, test, build, push Docker, deploy
 
 ---
 
-### Weeks 35–36 — Kubernetes for Rust
+# Phase 6 — Agents, Performance & Capstone (Weeks 41–52)
 
-**Tasks**
-
-* [ ] Deploy services to Minikube or Kind
-* [ ] Define Deployment, Service, and ConfigMap
-* [ ] Test scaling and service discovery
-
-**Deliverables**
-
-* Rust services running in K8s cluster
-* Documentation of deployment setup
-
----
-
-### Weeks 37–38 — Observability and Logging
-
-**Tasks**
-
-* [ ] Integrate `tracing` for structured logs
-* [ ] Export metrics to Prometheus
-* [ ] Create Grafana dashboards
-
-**Deliverables**
-
-* Observability setup for Rust microservices
-* Sample dashboards
-
----
-
-### Weeks 39–40 — CI/CD for Rust Microservices
-
-**Tasks**
-
-* [ ] Build CI pipelines (GitHub Actions / GitLab CI)
-* [ ] Lint, test, build Docker images automatically
-* [ ] Deploy updated Rust binaries to cluster
-
-**Deliverables**
-
-* Fully automated Rust microservices pipeline
-* Documentation and reproducible workflow
-
----
-
-## Phase 6 — Agents, Performance, and Capstone Project (Weeks 41–52)
-
-**Outcome:** Demonstrate mastery via advanced distributed Rust systems.
+**Outcome:** Build a full-scale distributed system showcasing actors, performance tuning, fault tolerance, and deployment.
 
 ### Weeks 41–42 — Actor-Based Systems
-
-**Tasks**
-
-* [ ] Build reactive single-node agents using `xtra` or `actix`
-* [ ] Agents respond to environment events
-
-**Mini-project:** **RustAgents**
-
-**Deliverables**
-
-* Logs demonstrating agent actions
-* Optional visualization
-
----
+- Implement agents reacting to events, message handling, fault isolation
 
 ### Weeks 43–44 — Multi-Agent Communication
-
-**Tasks**
-
-* [ ] Connect agents across nodes with NATS or gRPC
-* [ ] Implement retries, basic discovery, leader election
-
-**Mini-project:** Distributed RustAgents network
-
-**Deliverables**
-
-* Multi-agent communication demo
-* Resilience tests
-
----
+- Extend agents across nodes using NATS or gRPC
+- Retry logic, leader election among agents
 
 ### Weeks 45–46 — Performance & Profiling
-
-**Tasks**
-
-* [ ] Benchmark critical paths with `criterion`
-* [ ] Use `tokio-console` and flamegraphs
-* [ ] Optimize memory layout and lock contention
-
-**Deliverables**
-
-* Benchmark report + flamegraphs
-* Document optimizations applied
-
----
+- Benchmark hot paths, profiling with `criterion`, `tokio-console`, flamegraphs
+- Optimize locks, allocations, scheduling
 
 ### Weeks 47–48 — Fault Tolerance & Snapshots
-
-**Tasks**
-
-* [ ] Add snapshotting for agent and RaftiKV state
-* [ ] Harden recovery flows
-
-**Deliverables**
-
-* Robust multi-node Rust system
-* Notes on persistence and recovery strategies
-
----
+- Snapshot & log compaction
+- Test crash recovery and consistency
 
 ### Weeks 49–51 — Capstone: Distributed Event-Sourced Ledger
+- Event sourcing + CQRS, append-only storage, REST API, messaging, projections
+- Dockerized deployment & optional Kubernetes
 
-**Project Overview**
-
-* Event sourcing + CQRS + async microservices
-* Persistence: SQLite, PostgreSQL, or RocksDB
-* Messaging: NATS or Kafka
-* REST API & gRPC
-* Background workers, unit/integration tests
-* Docker Compose deployment
-
-**Deliverables**
-
-* Fully working distributed ledger system
-* GitHub repo with architecture, event model, CQRS, and API examples
+### Week 52 — Polish, Document & Showcase
+- Clean codebase, finalize tests, write architecture docs & blog post
+- Publish on GitHub as a portfolio project
 
 ---
 
-### Week 52 — Polish & Showcase
-
-**Tasks**
-
-* [ ] Refactor code, improve tests & documentation
-* [ ] Write technical blog post
-* [ ] Showcase on GitHub & LinkedIn
-
-**Deliverables**
-
-* Public portfolio demonstrating Rust distributed systems expertise
-* Blog post or demo video
+# Final Notes
+- Commit everything to a public Git repository
+- Document architecture as you go
+- Automate CI/CD early
+- Refactor and review after each phase  
