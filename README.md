@@ -16,6 +16,28 @@
 
 ---
 
+📦 Repo Structure
+
+rust-expert-journey/
+│
+├─ README.md                  # This roadmap + instructions
+├─ Cargo.toml                  # Root workspace Cargo.toml
+├─ rust-toolchain.toml         # Optional, pinned Rust version
+│
+├─ projects/
+│   ├─ rust-cli-toolkit/
+│   ├─ in-memory-store/
+│   ├─ rust-http-service/
+│   ├─ async-task-engine/
+│   ├─ low-latency-core/
+│   └─ rust-event-backend/
+│
+├─ benchmarks/                 # Optional benchmark scripts
+├─ docs/                       # Diagrams & architecture
+└─ .github/workflows/          # Optional CI/CD
+
+---
+
 ## 🗺️ Phase Overview
 
 | Phase   | Weeks | Focus                              |
