@@ -18,6 +18,8 @@
 
 📦 Repo Structure
 
+```csharp
+
 rust-expert-journey/
 │
 ├─ README.md                  # This roadmap + instructions
@@ -35,7 +37,7 @@ rust-expert-journey/
 ├─ benchmarks/                 # Optional benchmark scripts
 ├─ docs/                       # Diagrams & architecture
 └─ .github/workflows/          # Optional CI/CD
-
+```
 ---
 
 ## 🗺️ Phase Overview
