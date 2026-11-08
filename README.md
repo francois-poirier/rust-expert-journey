@@ -316,9 +316,6 @@ Each phase is broken into **3–5 milestones** (25 total). Each milestone has: o
 | **M3.4** Clients, backpressure, load testing | 23–24 | Prove the server handles real concurrent load | `replicate-client` crate with pooling/retries; load harness in `benches/load/` | P50/P95/P99 recorded; RSS bounded under load; backpressure location explained |
 
 **Definition of Done (Phase 3):** Explain Tokio tasks, scheduling and cancellation · Demonstrate bounded resource usage under load · Run concurrent producer/consumer tests · Report throughput and latency percentiles.
-````
-
----
 
 ### Phase 4 — Distributed Systems Engineering
 
