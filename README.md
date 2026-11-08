@@ -320,8 +320,6 @@ Each phase is broken into **3–5 milestones** (25 total). Each milestone has: o
 
 ---
 
-Aquí tienes la **PARTE 2 de 2** (fases 4–6 con 13 hitos + arquitectura del proyecto con diagramas + resto de secciones). Pega este bloque **a continuación** del anterior en tu `README.md`:
-````markdown
 ### Phase 4 — Distributed Systems Engineering
 
 **Weeks 25–36 · 360 hours · 5 milestones**
