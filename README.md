@@ -174,8 +174,8 @@ This section is the technical reference for the project. Read it before writing 
 ```
                    ┌─────────────────────────────────────────────┐
    HTTP/JSON       │              jobline-coordinator            │
-  ┌───────────┐    │  ┌─────────┐   ┌─────────────────────────┐  │
-  │ Producer  │──▶│  │ HTTP    │   │      Core Engine        │  │
+  ┌───────────┐    │  ┌─────────┐    ┌────────────────────────┐  │
+  │ Producer  │──▶│  │ HTTP    │    │      Core Engine       │  │
   │ (any)     │    │  │ Router  │──▶│  ┌──────────────┐      │  │
   └───────────┘    │  └────┬────┘    │  │ State machine│      │  │
   ┌───────────┐    │       │         │  │ (queues,     │      │  │
