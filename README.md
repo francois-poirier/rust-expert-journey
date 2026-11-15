@@ -172,26 +172,26 @@ This section is the technical reference for the project. Read it before writing 
 ### 4.2 Components and architecture (C4 level 2)
 
 ```
-                 ┌─────────────────────────────────────────────┐
-   HTTP/JSON     │              jobline-coordinator            │
-  ┌───────────┐   │  ┌─────────┐   ┌─────────────────────────┐  │
+                   ┌─────────────────────────────────────────────┐
+   HTTP/JSON       │              jobline-coordinator            │
+  ┌───────────┐    │  ┌─────────┐   ┌─────────────────────────┐  │
   │ Producer  │──▶│  │ HTTP    │   │      Core Engine        │  │
-  │ (any)     │   │  │ Router  │──▶│  ┌──────────────┐      │  │
-  └───────────┘   │  └────┬────┘   │  │ State machine │      │  │
-  ┌───────────┐   │       │        │  │ (queues,     │      │  │
-  │ Worker 1  │──▶│       │        │  │  leases,DLQ) │      │  │
-  │ (client   │   │       ▼        │  └──────┬───────┘      │  │
-  │  crate)   │   │  ┌─────────┐   │         │              │  │
-  └───────────┘   │  │ proto   │   │  ┌──────▼───────┐      │  │
-  ┌───────────┐   │  │ (types) │   │  │ Store (WAL,  │      │  │
-  │ Worker N  │──▶│  └─────────┘   │  │  snapshot)   │──────┼──┼──▶ disk
-  └───────────┘   │                  │  └──────────────┘      │  │
-                 │                  │  ┌──────────────┐      │  │
-                 │                  │  │ Lease mgr    │      │  │
-                 │                  │  │ (timers)     │      │  │
-                 │                  │  └──────────────┘      │  │
-                 │                  └─────────────────────────┘  │
-                 └─────────────────────────────────────────────┘
+  │ (any)     │    │  │ Router  │──▶│  ┌──────────────┐      │  │
+  └───────────┘    │  └────┬────┘    │  │ State machine│      │  │
+  ┌───────────┐    │       │         │  │ (queues,     │      │  │
+  │ Worker 1  │──▶│       │         │  │  leases,DLQ) │      │  │
+  │ (client   │    │       ▼         │  └──────┬───────┘      │  │
+  │  crate)   │    │  ┌─────────┐    │         │              │  │
+  └───────────┘    │  │ proto   │    │  ┌──────▼───────┐      │  │
+  ┌───────────┐    │  │ (types) │    │  │ Store (WAL,  │      │  │
+  │ Worker N  │──▶│  └─────────┘    │  │  snapshot)   │──────┼──┼──▶ disk
+  └───────────┘    │                 │  └──────────────┘      │  │
+                   │                 │  ┌──────────────┐      │  │
+                   │                 │  │ Lease mgr    │      │  │
+                   │                 │  │ (timers)     │      │  │
+                   │                 │  └──────────────┘      │  │
+                   │                 └────────────────────────┘  │
+                   └─────────────────────────────────────────────┘
 ```
 
 - **Coordinator**: single process. Exposes HTTP/JSON. Holds all state in memory (Rust data structures) backed by the WAL.
