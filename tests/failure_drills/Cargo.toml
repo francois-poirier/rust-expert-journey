@@ -1,0 +1,5 @@
+[package]
+name = "jobline-failure-drills"
+version.workspace = true
+edition.workspace = true
+publish = false
