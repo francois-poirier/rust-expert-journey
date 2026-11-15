@@ -415,7 +415,7 @@ jobline/
 └── .github/workflows/ci.yml
 ```
 
-`Cargo.toml` (workspace): resolver = "2", edition 2021, common lints (clippy pedantic on non-bin crates), version 0.1.0.
+`Cargo.toml` (workspace): resolver = "2", edition 2024, common lints (clippy pedantic on non-bin crates), version 0.1.0.
 
 ### 5.2 Crates in detail
 

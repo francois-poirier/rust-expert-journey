@@ -1,0 +1,5 @@
+[package]
+name = "jobline-integration"
+version.workspace = true
+edition.workspace = true
+publish = false

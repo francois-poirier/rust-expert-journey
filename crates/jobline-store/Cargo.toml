@@ -1,0 +1,12 @@
+[package]
+name = "jobline-store"
+version.workspace = true
+edition.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+jobline-proto = { path = "../jobline-proto" }
+jobline-core = { path = "../jobline-core" }
+thiserror = "2"

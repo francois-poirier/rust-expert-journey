@@ -1,0 +1,11 @@
+[package]
+name = "jobline-load"
+version.workspace = true
+edition.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+jobline-client = { path = "../jobline-client" }
+anyhow = "1"

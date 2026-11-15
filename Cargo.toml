@@ -1,0 +1,21 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/jobline-proto",
+    "crates/jobline-core",
+    "crates/jobline-store",
+    "crates/jobline-coordinator",
+    "crates/jobline-client",
+    "crates/joblinectl",
+    "crates/jobline-load",
+    "examples/demo_worker",
+    "tests/integration",
+    "tests/failure_drills",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+
+[workspace.lints.clippy]
+pedantic = { level = "warn", priority = -1 }

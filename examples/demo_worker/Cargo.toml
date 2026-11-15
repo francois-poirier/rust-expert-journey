@@ -1,0 +1,8 @@
+[package]
+name = "demo_worker"
+version.workspace = true
+edition.workspace = true
+publish = false
+
+[dependencies]
+jobline-client = { path = "../../crates/jobline-client" }

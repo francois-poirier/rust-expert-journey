@@ -1,0 +1,13 @@
+[package]
+name = "jobline-coordinator"
+version.workspace = true
+edition.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+jobline-proto = { path = "../jobline-proto" }
+jobline-core = { path = "../jobline-core" }
+jobline-store = { path = "../jobline-store" }
+anyhow = "1"
